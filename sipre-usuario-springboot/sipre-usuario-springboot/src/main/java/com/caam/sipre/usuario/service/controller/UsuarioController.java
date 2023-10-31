@@ -94,14 +94,14 @@ public class UsuarioController {
         return ResponseEntity.ok(resultado);
     }
 
-    private ResponseEntity<List<CarroModel>> obtenerCarrosFBM(@PathVariable("usuarioId") int id, RuntimeException e){
+    private ResponseEntity<CarroModel> obtenerCarrosFBM(@PathVariable("usuarioId") int id, RuntimeException e){
         return new ResponseEntity("El usuario :" + id + " Tiene los carros en el taller", HttpStatus.OK);
     }
     private ResponseEntity<List<CarroModel>> guardarCarroFBM(@PathVariable("usuarioId") int id, @RequestBody CarroModel carro, RuntimeException e){
         return new ResponseEntity("El usuario :" + id + " No Tiene dinero para los carros", HttpStatus.OK);
     }
 
-    private ResponseEntity<List<MotoModel>> obtenerMotosFBM(@PathVariable("usuarioId") int id, RuntimeException e){
+    private ResponseEntity<MotoModel> obtenerMotosFBM(@PathVariable("usuarioId") int id, RuntimeException e){
         return new ResponseEntity("El usuario :" + id + " Tiene los motos en el taller", HttpStatus.OK);
     }
     private ResponseEntity<List<MotoModel>> guardarMotoFBM(@PathVariable("usuarioId") int id,@RequestBody MotoModel moto, RuntimeException e){
